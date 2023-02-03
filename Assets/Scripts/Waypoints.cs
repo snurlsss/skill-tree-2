@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoints : MonoBehaviour{
@@ -7,7 +5,7 @@ public class Waypoints : MonoBehaviour{
 
     void Awake(){
         points = Transform[transform.childCount];
-        for(int i = 0; i < length; i++){
+        for(int i = 0; i < points.length; i++){
             points[i] = transform.GetChild(i);
         }
     }

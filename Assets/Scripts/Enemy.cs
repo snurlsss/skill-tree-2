@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class Enemy : MonoBehaviour{
+    public float speed = 10f;
+
+    private Transform target;
+    private int waypointIndex = 0;
+
+    void GetNextWaypoint(){
+        waypointIndex++;
+        target = Waypoints.points[waypointIndex];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start(){
+        target = Waypoints[0];
+    }
+
+    void Update(){
+        Vector2 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        if(Vector2.Distance(transform.position, target.position) <= 0.2){
+            GetNextWaypoint();
+        }
     }
 }
