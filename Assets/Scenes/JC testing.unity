@@ -954,6 +954,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835045472485745089, guid: c430dde75c3baf349bb536888526c9b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7835045472485745094, guid: c430dde75c3baf349bb536888526c9b0, type: 3}
       propertyPath: m_Name
       value: Surface
