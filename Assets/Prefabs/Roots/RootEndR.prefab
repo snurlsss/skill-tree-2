@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3006243732878743817
+--- !u!1001 &5711039634849286728
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2408202791766833063, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
       propertyPath: m_Name
-      value: RootEndOrthagonal
+      value: RootEndR
       objectReference: {fileID: 0}
     - target: {fileID: 7058861580586450484, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
       propertyPath: m_RootOrder
@@ -56,17 +56,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8026998385150579211, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
-      propertyPath: m_Size.x
-      value: 7.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026998385150579211, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
-      propertyPath: m_Size.y
-      value: 7.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026998385150579211, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0e35f1e160a17df43bab2b879764560e, type: 3}
+      objectReference: {fileID: -1042687400, guid: 47d520d8f29685b4ca715d19100aabe3, type: 3}
     - target: {fileID: 8026998385150579211, guid: 819650df98fde2441a181ba56921bc0f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
