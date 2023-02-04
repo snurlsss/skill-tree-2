@@ -128,15 +128,161 @@ public class RootProperties : MonoBehaviour
                     }
                     else // ----
                     {
-
+                        spriteRenderer.sprite = null;
                     }
                 }
             }
+        }
+
+        if (up == true)
+        {
+            connectUp = true;
+        }
+        else
+        {
+            connectUp = false;
+        }
+
+        if (left == true)
+        {
+            connectLeft = true;
+        }
+        else
+        {
+            connectLeft = false;
+        }
+
+        if (right == true)
+        {
+            connectRight = true;
+        }
+        else
+        {
+            connectRight = false;
+        }
+
+        if (down == true)
+        {
+            connectDown = true;
+        }
+        else
+        {
+            connectDown = false;
         }
     }
 
     void UpdateSprite()
     {
+        bool up = connectUp;
+        bool left = connectLeft;
+        bool right = connectRight;
+        bool down = connectDown;
 
+        if (up == true)
+        {
+            if (left == true)
+            {
+                if (right == true)
+                {
+                    if (down == true) // ULRD
+                    {
+                        spriteRenderer.sprite = rootSprites[0];
+                    }
+                    else // ULR-
+                    {
+                        spriteRenderer.sprite = rootSprites[1];
+                    }
+                }
+                else
+                {
+                    if (down == true) // UL-D
+                    {
+                        spriteRenderer.sprite = rootSprites[2];
+                    }
+                    else // UL--
+                    {
+                        spriteRenderer.sprite = rootSprites[3];
+                    }
+                }
+            }
+            else
+            {
+                if (right == true)
+                {
+                    if (down == true) // U-RD
+                    {
+                        spriteRenderer.sprite = rootSprites[4];
+                    }
+                    else // U-R-
+                    {
+                        spriteRenderer.sprite = rootSprites[5];
+                    }
+                }
+                else
+                {
+                    if (down == true) // U--D
+                    {
+                        spriteRenderer.sprite = rootSprites[6];
+                    }
+                    else // U---
+                    {
+                        spriteRenderer.sprite = rootSprites[7];
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (left == true)
+            {
+                if (right == true)
+                {
+                    if (down == true) // -LRD
+                    {
+                        spriteRenderer.sprite = rootSprites[8];
+                    }
+                    else // -LR-
+                    {
+                        spriteRenderer.sprite = rootSprites[9];
+                    }
+                }
+                else
+                {
+                    if (down == true) // -L-D
+                    {
+                        spriteRenderer.sprite = rootSprites[10];
+                    }
+                    else // -L--
+                    {
+                        spriteRenderer.sprite = rootSprites[11];
+                    }
+                }
+            }
+            else
+            {
+                if (right == true)
+                {
+                    if (down == true) // --RD
+                    {
+                        spriteRenderer.sprite = rootSprites[12];
+                    }
+                    else // --R-
+                    {
+                        spriteRenderer.sprite = rootSprites[13];
+                    }
+                }
+                else
+                {
+                    if (down == true) // ---D
+                    {
+                        spriteRenderer.sprite = rootSprites[14];
+                    }
+                    else // ----
+                    {
+                        spriteRenderer.sprite = null;
+                    }
+                }
+            }
+        }
     }
 }
