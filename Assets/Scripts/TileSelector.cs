@@ -17,6 +17,7 @@ public class TileSelector : MonoBehaviour
     [SerializeField] GameObject rightTile;
     [SerializeField] GameObject downTile;
 
+    public int tilesPerBranch;
     private int remainingTiles;
     private GameObject previousTile; // Should be changed into a List instead
 
@@ -44,6 +45,7 @@ public class TileSelector : MonoBehaviour
 
     void Awake()
     {
+        remainingTiles = tilesPerBranch;
         UpdateSelectability();
     }
 
@@ -233,21 +235,25 @@ public class TileSelector : MonoBehaviour
         {
             selectedTile = upTile;
             selectability = upSelectability;
+            print("Trigger select up.");
         }
         else if (direction == 1) // Left
         {
             selectedTile = leftTile;
             selectability = leftSelectability;
+            print("Trigger select left.");
         }
         else if (direction == 2) // Right
         {
             selectedTile = rightTile;
             selectability = rightSelectability;
+            print("Trigger select right.");
         }
         else if (direction == 3) // Down
         {
             selectedTile = downTile;
             selectability = rightSelectability;
+            print("Trigger select down.");
         }
         else
         {

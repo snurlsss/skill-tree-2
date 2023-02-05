@@ -112,6 +112,7 @@ MonoBehaviour:
   leftTile: {fileID: 7095585967529343649}
   rightTile: {fileID: 8285194647538636340}
   downTile: {fileID: 2503360516251827354}
+  tilesPerBranch: 5
   selectionLayerMask:
     serializedVersion: 2
     m_Bits: 8
